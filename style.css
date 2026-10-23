@@ -1,0 +1,398 @@
+/*  */
+:root {
+    --rosa: #ff6b9d;
+    --rosa-escuro: #ff4d8d;
+    --amarelo: #ffd166;
+    --marrom: #8B4513;
+    --creme: #FFF8F0;
+    --cinza: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--creme);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Fredoka', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    color: var(--rosa);
+    font-size: 1.8rem;
+}
+
+.logo span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--rosa);
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: var(--rosa);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--rosa-escuro);
+}
+
+/* Seção Hero */
+.hero {
+    padding: 150px 0 100px;
+    background: linear-gradient(135deg, var(--creme) 0%, white 100%);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: var(--marrom);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sweet-icon {
+    font-size: 15rem;
+    color: var(--amarelo);
+}
+
+/* Seção Produtos */
+.produtos {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--marrom);
+    margin-bottom: 3rem;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produto {
+    background-color: var(--creme);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+}
+
+.imagem-produto {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    color: var(--marrom);
+    margin-bottom: 10px;
+}
+
+.produto p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.preco {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--rosa);
+    margin-bottom: 15px;
+}
+
+.btn-adicionar {
+    background-color: var(--amarelo);
+    color: var(--marrom);
+    padding: 8px 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar:hover {
+    background-color: #ffc234;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 100px 0;
+    background-color: var(--creme);
+}
+
+.sobre h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--marrom);
+    margin-bottom: 3rem;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.sobre-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-icon {
+    font-size: 10rem;
+    color: var(--rosa);
+}
+
+/* Seção Contato */
+.contato {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.contato h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--marrom);
+    margin-bottom: 3rem;
+}
+
+.contato-conteudo {
+    display: flex;
+    gap: 50px;
+}
+
+.contato-info {
+    flex: 1;
+}
+
+.contato-info h3 {
+    color: var(--rosa);
+    margin-bottom: 1rem;
+}
+
+.contato-info p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.contato-formulario {
+    flex: 1;
+}
+
+.grupo-campo {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--marrom);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-logo h3 {
+    color: var(--amarelo);
+}
+
+.footer-links h4,
+.footer-redes h4 {
+    color: var(--amarelo);
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--amarelo);
+}
+
+.icones-redes a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.icones-redes a:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 150px 0 50px;
+    }
+    
+    .hero-content {
+        margin-bottom: 50px;
+    }
+    
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+    
+    .contato-conteudo {
+        flex-direction: column;
+    }
+    
+    .footer-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sweet-icon, .sobre-icon {
+        font-size: 8rem;
+    }
+}
